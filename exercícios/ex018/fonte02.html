@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        /*Formatos para format
+                - opentype (otf)
+                - truetype (ttf)
+                - embedded-opentype
+                - truetype-aat (Apple Advanced Typography)
+                - svg
+            */
+        @font-face {
+            font-family:'bubble' ;
+            src: url(fonts/JustBubble.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+            
+        }
+        @font-face {
+            font-family: 'history';
+            src: url(fonts/ART HISTORY BOOK.otf) format(opentype);
+            font-weight: normal;
+            font-style: normal; 
+        }
+        body{
+            font-family: Helvetica, sans-serif;
+            font-weight: normal;
+
+        }
+        h1{
+            font-family:'history', 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corporis inventore, eaque recusandae quaerat minus nisi eius. Animi nisi beatae est voluptatibus corporis blanditiis unde consequuntur, voluptatem corrupti, iure magnam.</p>
+    
+</body>
+</html>
