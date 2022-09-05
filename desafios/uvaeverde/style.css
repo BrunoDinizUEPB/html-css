@@ -1,4 +1,4 @@
-@charset
+@charset "UTF-8";
 
 :root{
 
@@ -7,4 +7,26 @@
     --cor03: #534A8C;
     --cor04: #D9A689;
     --cor05: #A64833;
+}
+
+
+header{
+    background-color: var(--cor01);
+    text-align: center;
+    height: 80px;
+    
+    
+}
+header > h1{
+    color: white;
+
+}
+
+nav {
+    text-align: left;
+
+}
+
+nav > a{
+    color: white;
 }
