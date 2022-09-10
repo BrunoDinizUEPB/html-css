@@ -30,3 +30,15 @@ nav {
 nav > a{
     color: white;
 }
+
+footer{
+    background-color: var(--cor03);
+    box-shadow: 30px;
+}
+footer > p{
+    color: white;
+    text-align: center;
+    box-shadow: 0px 5px 5px black;
+    
+    
+}
