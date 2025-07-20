@@ -1,102 +1,118 @@
+/* Define o conjunto de caracteres como UTF-8 para suportar acentuação e caracteres especiais */
 @charset "UTF-8";
 
-@import url("../fonte/PassionOne-Regular.ttf");
-@import url("../fonte/Sriracha-Regular.ttf");
+/* Importa duas fontes personalizadas do diretório local */
+@import url("../fonte/PassionOne-Regular.ttf"); /* Fonte decorativa para títulos */
+@import url("../fonte/Sriracha-Regular.ttf");    /* Fonte cursiva para o corpo dos textos estilizados */
 
-:root{
-    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: 'Passion One', cursive;
-    --fonte3: 'Sriracha', cursive;
+/* Define variáveis globais com fontes que serão reutilizadas ao longo do CSS */
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /* Fonte padrão geral do site */
+    --fonte2: 'Passion One', cursive;              /* Fonte para o título principal */
+    --fonte3: 'Sriracha', cursive;                 /* Fonte para textos das seções */
 }
 
-*{
+/* Remove margens e espaçamentos padrões de todos os elementos para evitar inconsistências */
+* {
     margin: 0px;
     padding: 0px;
 }
 
-html, body{
-    min-height: 100vh;
-    background-color: darkgray ;
-    font-family: var(--fonte1);
+/* Define altura mínima da tela e estilo geral do corpo da página */
+html, body {
+    min-height: 100vh;              /* Garante que o corpo ocupe pelo menos 100% da altura da viewport */
+    background-color: darkgray;     /* Cor de fundo cinza escura */
+    font-family: var(--fonte1);     /* Aplica a fonte padrão definida na variável */
 }
 
-header{
-    background-color: black;
-    color: white;
-    text-align: center;
+/* Estiliza o cabeçalho da página */
+header {
+    background-color: black;        /* Fundo preto para destaque */
+    color: white;                   /* Texto em branco */
+    text-align: center;             /* Centraliza o conteúdo do cabeçalho */
 }
 
-header > h1{
-    padding-top: 50px;
-    font-variant: small-caps;
-    font-family: var(--fonte2);
-    font-size: 4vw;
+/* Estilo do título principal dentro do cabeçalho */
+header > h1 {
+    padding-top: 50px;              /* Espaçamento superior de 50px */
+    font-variant: small-caps;       /* Letras maiúsculas com tamanho reduzido */
+    font-family: var(--fonte2);     /* Fonte decorativa para o título */
+    font-size: 4vw;                 /* Tamanho do texto responsivo baseado na largura da viewport */
 }
 
-header > p{
-    padding-bottom: 50px;
+/* Estilo do parágrafo logo abaixo do título no cabeçalho */
+header > p {
+    padding-bottom: 50px;           /* Espaço inferior para separar do conteúdo abaixo */
 }
 
-header a, footer a{
-    color: white;
-    text-decoration: nome;
-    font-weight: bolder;
+/* Estilo de links contidos no cabeçalho e no rodapé */
+header a, footer a {
+    color: white;                   /* Cor dos links em branco */
+    text-decoration: none;          /* Remove o sublinhado padrão dos links */
+    font-weight: bolder;            /* Deixa o link em negrito para maior destaque */
 }
 
-header a:hover, footer a:hover{
-    text-decoration: underline;
+/* Efeito hover (passar o mouse) nos links do cabeçalho e rodapé */
+header a:hover, footer a:hover {
+    text-decoration: underline;     /* Aplica sublinhado ao passar o mouse para destacar */
 }
 
-section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: var(--fonte3);
-    font-size: 3vw;
+/* Estiliza todas as seções do corpo da página */
+section {
+    padding-top: 10vh;              /* Espaço superior proporcional à altura da tela */
+    padding-bottom: 10vh;           /* Espaço inferior proporcional */
+    padding-left: 30px;             /* Recuo à esquerda para o texto */
+    line-height: 2em;               /* Aumenta o espaçamento entre linhas para melhorar a leitura */
+    font-family: var(--fonte3);     /* Usa a fonte cursiva para dar estilo ao texto */
+    font-size: 3vw;                 /* Tamanho responsivo do texto */
 }
 
-section > p{
-    padding-bottom: 2em;
+/* Aplica espaçamento inferior entre parágrafos dentro da seção */
+section > p {
+    padding-bottom: 2em;            /* Distância entre parágrafos */
 }
 
-section.normal{
-    background-color: white;
-    color: black;
+/* Classe para seções com fundo branco e texto preto (conteúdo normal) */
+section.normal {
+    background-color: white;        /* Fundo branco */
+    color: black;                   /* Texto preto padrão */
 }
 
-section.imagem{
-    background-color: rgb(51, 51, 51);
-    color: white;
-    box-shadow: inset 6px 6px 13px 0px black;
-   
+/* Classe para seções com imagem e fundo escuro */
+section.imagem {
+    background-color: rgb(51, 51, 51); /* Tom escuro de cinza */
+    color: white;                      /* Texto branco para contraste */
+    box-shadow: inset 6px 6px 13px 0px black; /* Sombra interna para dar efeito de profundidade */
 }
 
-#img01{
-    background-image: url(../imagens/background001.jpg);
-    background-attachment: fixed;
-    background-position: right center;
-    background-size: cover;
+/* Define a imagem de fundo e seu comportamento para a seção com ID img01 */
+#img01 {
+    background-image: url(../imagens/background001.jpg); /* Caminho da imagem */
+    background-attachment: fixed;                         /* Mantém a imagem fixa ao rolar a página */
+    background-position: right center;                    /* Alinha a imagem à direita e ao centro verticalmente */
+    background-size: cover;                               /* Ajusta a imagem para cobrir toda a área da seção */
 }
 
-#img02{
-    background-image: url(../imagens/background002.jpg);
-    background-attachment: fixed;
-    background-position: right center;
-    background-size: cover;
+/* Define a imagem de fundo e seu comportamento para a seção com ID img02 */
+#img02 {
+    background-image: url(../imagens/background002.jpg); /* Caminho da imagem */
+    background-attachment: fixed;                         /* Imagem fixa no scroll */
+    background-position: right center;                    /* Alinhamento da imagem */
+    background-size: cover;                               /* Ajuste para preencher toda a área */
 }
 
-section.imagem > p{
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.418);
-    text-shadow: 1px 1px 0px black;
+/* Estiliza os parágrafos que estão dentro de seções com imagem */
+section.imagem > p {
+    display: inline-block;                    /* Permite aplicar padding e background em linha */
+    padding: 5px;                             /* Espaçamento interno do parágrafo */
+    background-color: rgba(0, 0, 0, 0.418);   /* Fundo preto semitransparente para destacar o texto */
+    text-shadow: 1px 1px 0px black;           /* Sombra preta no texto para facilitar leitura sobre imagens */
 }
 
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* Estilização do rodapé da página */
+footer {
+    background-color: black;     /* Fundo preto */
+    color: white;                /* Texto branco */
+    text-align: center;          /* Centraliza o conteúdo */
+    padding: 10px;               /* Espaçamento interno */
 }
-
